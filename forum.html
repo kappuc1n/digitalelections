@@ -1,0 +1,53 @@
+<!-- templates/forum.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форум</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/history">История цифровизации</a></li>
+                <li><a href="/current_tech">Текущие технологии</a></li>
+                <li><a href="/pros_cons">Преимущества и недостатки</a></li>
+                <li><a href="/analytics">Аналитика</a></li>
+                <li><a href="/news">Новости</a></li>
+                <li><a href="/forum">Форум</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Форум: Обсуждение цифровизации избирательной системы</h1>
+
+            <!-- Форма для отправки сообщений -->
+            <form action="/forum" method="POST">
+                <label for="username">Ваше имя:</label><br>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="message">Сообщение:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <input type="submit" value="Отправить">
+            </form>
+
+            <hr>
+
+            <h2>Сообщения:</h2>
+            <ul>
+                {% for msg in messages %}
+                    <li><strong>{{ msg.username }}:</strong> {{ msg.message }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Цифровизация избирательной системы. Все права защищены.</p>
+    </footer>
+</body>
+</html>

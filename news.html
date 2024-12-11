@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Избирательная система России</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/history">История цифровизации</a></li>
+                <li><a href="/current-tech">Текущие технологии</a></li>
+                <li><a href="/pros-cons">Преимущества и недостатки</a></li>
+                <li><a href="/analytics">Аналитика и исследования</a></li>
+                <li><a href="/news">Новости</a></li>
+                <li><a href="/forum">Форум</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="news">
+            <h2>Новости</h2>
+            <ul>
+                <li><a href="http://www.hmao.izbirkom.ru/isp-tech-sredstv/novye-tsifrovye-tekhnologii/">Новости 1: Новые технологии в цифровом голосовании.</a></li>
+                <li><a href="https://cyberleninka.ru/article/n/problemy-elektronnogo-golosovaniya-1">Новости 2: Проблемы с безопасностью электронных выборов.</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Избирательная система России. Все права защищены.</p>
+    </footer>
+</body>
+</html>
